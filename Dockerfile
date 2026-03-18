@@ -9,9 +9,10 @@ COPY . .
 
 RUN npm run build
 
-
+# start of docker build
 FROM node:20-alpine AS prod
 
+# directory
 WORKDIR /van_damme_cathrine_ui_garden
 
 RUN npm install -g serve

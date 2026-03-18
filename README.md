@@ -71,3 +71,7 @@ docker stop van_damme_cathrine_coding_assignment12
 docker rm van_damme_cathrine_coding_assignment12
 
 
+# Commiting to Github
+Step 1: git add .
+Step 2: git commit -m "meaning full message"
+Step 3. git push -u origin main
