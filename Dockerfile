@@ -1,24 +1,16 @@
-FROM node:20-alpine AS build
+FROM node:20-alpine
 
-WORKDIR /van_damme_cathrine_ui_garden
+WORKDIR /vanDamme_cathrine_ui_garden_build_checks
 
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
 
 COPY . .
 
 RUN npm run build
 
-# start of docker build
-FROM node:20-alpine AS prod
-
-# directory
-WORKDIR /van_damme_cathrine_ui_garden
-
 RUN npm install -g serve
 
-COPY --from=build /van_damme_cathrine_ui_garden/build ./build
+EXPOSE 8018
 
-EXPOSE 8083
-
-CMD ["serve", "-s", "build", "-l", "8083"]
+CMD ["serve", "-s", "build", "-l", "8018"]

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { TableCellProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableCellProps } from './Table.types';
 
 const StyledCell = styled.td<{ $bg?: string; $disabled?: boolean }>`
-  background: ${(p) => p.$bg ?? "transparent"};
+  background: ${(p) => p.$bg ?? 'transparent'};
 
   ${(p) =>
     p.$disabled &&
@@ -18,7 +18,7 @@ export const TableCell: React.FC<TableCellProps> = ({
   backgroundColor,
   disabled = false,
   children,
-  as = "td",
+  as = 'td',
   colSpan,
 }) => (
   <StyledCell

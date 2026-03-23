@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { BaseTablePartProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { BaseTablePartProps } from './Table.types';
 
 const StyledTfoot = styled.tfoot<{ $bg?: string; $disabled?: boolean }>`
-  background: ${(p) => p.$bg ?? "#f3f3f3"};
+  background: ${(p) => p.$bg ?? '#f3f3f3'};
 
   ${(p) =>
     p.$disabled &&

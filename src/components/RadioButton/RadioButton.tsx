@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { RadioButtonProps } from "./RadioButton.types";
+import React from 'react';
+import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
 
 const Wrapper = styled.label<{ $bg?: string; $disabled?: boolean }>`
   display: inline-flex;
@@ -10,8 +10,8 @@ const Wrapper = styled.label<{ $bg?: string; $disabled?: boolean }>`
   padding: 10px 12px;
   border-radius: 10px;
 
-  background: ${(p) => p.$bg ?? "transparent"};
-  cursor: ${(p) => (p.$disabled ? "not-allowed" : "pointer")};
+  background: ${(p) => p.$bg ?? 'transparent'};
+  cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'pointer')};
   opacity: ${(p) => (p.$disabled ? 0.6 : 1)};
 
   ${(p) => p.$disabled && `background: #bdbdbd;`}
@@ -24,10 +24,10 @@ const Wrapper = styled.label<{ $bg?: string; $disabled?: boolean }>`
 `;
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
-  label = "Radio",
+  label = 'Radio',
   backgroundColor,
   disabled = false,
-  name = "radio",
+  name = 'radio',
 }) => (
   <Wrapper data-testid="radio" $bg={backgroundColor} $disabled={disabled}>
     <input type="radio" name={name} disabled={disabled} />

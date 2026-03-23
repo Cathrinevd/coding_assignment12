@@ -1,18 +1,18 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Text } from "./Text";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Text } from './Text';
 
 const meta: Meta<typeof Text> = {
-  title: "Components/Text",
+  title: 'Components/Text',
   component: Text,
   args: {
-    text: "Text",
-    backgroundColor: "#2d6cdf",
+    text: 'Text',
+    backgroundColor: '#2d6cdf',
     disabled: false,
   },
   argTypes: {
-    text: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 

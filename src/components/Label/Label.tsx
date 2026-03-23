@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import React from 'react';
+import styled from 'styled-components';
+import { LabelProps } from './Label.types';
 
 const StyledLabel = styled.label<{ $bg?: string; $disabled?: boolean }>`
   display: inline-block;
   padding: 6px 10px;
   border-radius: 8px;
 
-  background: ${(p) => p.$bg ?? "transparent"};
-  color: ${(p) => (p.$disabled ? "#666" : "#111")};
+  background: ${(p) => p.$bg ?? 'transparent'};
+  color: ${(p) => (p.$disabled ? '#666' : '#111')};
 
-  cursor: ${(p) => (p.$disabled ? "not-allowed" : "default")};
+  cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'default')};
   opacity: ${(p) => (p.$disabled ? 0.6 : 1)};
 
   font-size: 14px;
@@ -21,7 +21,7 @@ const StyledLabel = styled.label<{ $bg?: string; $disabled?: boolean }>`
 `;
 
 export const Label: React.FC<LabelProps> = ({
-  text = "Label",
+  text = 'Label',
   backgroundColor,
   disabled = false,
   htmlFor,

@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import styled from 'styled-components';
+import { HeroImageProps } from './HeroImage.types';
 
 const Wrapper = styled.section<{ $bg?: string; $disabled?: boolean }>`
   width: 100%;
   padding: 40px 16px;
   border-radius: 16px;
 
-  background: ${(p) => p.$bg ?? "#2d6cdf"};
+  background: ${(p) => p.$bg ?? '#2d6cdf'};
   color: white;
 
   ${(p) =>
@@ -42,13 +42,12 @@ const Subtitle = styled.p`
 `;
 
 export const HeroImage: React.FC<HeroImageProps> = ({
-  title = "Hero Title",
-  subtitle = "Hero subtitle text",
+  title = 'Hero Title',
+  subtitle = 'Hero subtitle text',
   backgroundColor,
   disabled = false,
 }) => (
-  <Wrapper data-testid="hero"
- $bg={backgroundColor} $disabled={disabled}>
+  <Wrapper data-testid="hero" $bg={backgroundColor} $disabled={disabled}>
     <Title>{title}</Title>
     <Subtitle>{subtitle}</Subtitle>
   </Wrapper>

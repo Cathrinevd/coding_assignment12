@@ -1,17 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Table } from "./Table";
-import { TableHeader } from "./TableHeader";
-import { TableRow } from "./TableRow";
-import { TableCell } from "./TableCell";
-import { TableFooter } from "./TableFooter";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Table } from './Table';
+import { TableHeader } from './TableHeader';
+import { TableRow } from './TableRow';
+import { TableCell } from './TableCell';
+import { TableFooter } from './TableFooter';
 
 const meta: Meta<typeof Table> = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
-  args: { backgroundColor: "#ffffff", disabled: false },
+  args: { backgroundColor: '#ffffff', disabled: false },
   argTypes: {
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 

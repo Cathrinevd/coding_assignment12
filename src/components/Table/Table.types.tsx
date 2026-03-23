@@ -10,6 +10,6 @@ export type TableCellProps = {
   backgroundColor?: string;
   disabled?: boolean;
   children?: React.ReactNode;
-  as?: "td" | "th";
+  as?: 'td' | 'th';
   colSpan?: number;
 };

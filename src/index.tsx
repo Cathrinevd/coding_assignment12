@@ -3,16 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-export * from "./components/Button";
-export * from "./components/Label";
-export * from "./components/Text";
-export * from "./components/Table";
-export * from "./components/Dropdown";
-export * from "./components/RadioButton";
-export * from "./components/Img";
-export * from "./components/HeroImage";
-export * from "./components/Card";
-
+export * from './components/Button';
+export * from './components/Label';
+export * from './components/Text';
+export * from './components/Table';
+export * from './components/Dropdown';
+export * from './components/RadioButton';
+export * from './components/Img';
+export * from './components/HeroImage';
+export * from './components/Card';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

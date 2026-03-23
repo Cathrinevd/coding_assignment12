@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { ImgProps } from "./Img.types";
+import React from 'react';
+import styled from 'styled-components';
+import { ImgProps } from './Img.types';
 
 const Wrapper = styled.div<{ $bg?: string; $disabled?: boolean }>`
   display: inline-block;
   border-radius: 12px;
   overflow: hidden;
 
-  background: ${(p) => p.$bg ?? "transparent"};
+  background: ${(p) => p.$bg ?? 'transparent'};
 
   ${(p) =>
     p.$disabled &&
@@ -19,7 +19,7 @@ const Wrapper = styled.div<{ $bg?: string; $disabled?: boolean }>`
 `;
 
 const StyledImg = styled.img<{ $width?: string }>`
-  width: ${(p) => p.$width ?? "100%"};
+  width: ${(p) => p.$width ?? '100%'};
   max-width: 480px;
   display: block;
 
@@ -29,8 +29,8 @@ const StyledImg = styled.img<{ $width?: string }>`
 `;
 
 export const Img: React.FC<ImgProps> = ({
-  src = "https://via.placeholder.com/480x220",
-  alt = "image",
+  src = 'https://via.placeholder.com/480x220',
+  alt = 'image',
   backgroundColor,
   disabled = false,
   width,

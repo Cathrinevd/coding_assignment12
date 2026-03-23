@@ -1,5 +1,5 @@
-const js = require("@eslint/js");
-const globals = require("globals");
+const js = require('@eslint/js');
+const globals = require('globals');
 
 module.exports = [
   js.configs.reccomended,
@@ -7,8 +7,8 @@ module.exports = [
     lnaguageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
-      }
-    }
-  }
+        ...globals.node,
+      },
+    },
+  },
 ];

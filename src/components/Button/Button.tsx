@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import React from 'react';
+import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
 
 const StyledButton = styled.button<{ $bg?: string; $disabled?: boolean }>`
   padding: 12px 18px;
@@ -12,7 +12,7 @@ const StyledButton = styled.button<{ $bg?: string; $disabled?: boolean }>`
 
   font-size: 16px;
 
-  background: ${(p) => p.$bg ?? "#2d6cdf"};
+  background: ${(p) => p.$bg ?? '#2d6cdf'};
   color: white;
 
   cursor: pointer;
@@ -33,7 +33,7 @@ const StyledButton = styled.button<{ $bg?: string; $disabled?: boolean }>`
 `;
 
 export const Button: React.FC<ButtonProps> = ({
-  text = "Button",
+  text = 'Button',
   backgroundColor,
   disabled = false,
   onClick,

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { CardProps } from "./Card.types";
+import React from 'react';
+import styled from 'styled-components';
+import { CardProps } from './Card.types';
 
 const Wrapper = styled.div<{ $bg?: string; $disabled?: boolean }>`
   width: 100%;
@@ -8,7 +8,7 @@ const Wrapper = styled.div<{ $bg?: string; $disabled?: boolean }>`
   border-radius: 16px;
   padding: 16px;
 
-  background: ${(p) => p.$bg ?? "#ffffff"};
+  background: ${(p) => p.$bg ?? '#ffffff'};
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 
   ${(p) =>
@@ -43,8 +43,8 @@ const Body = styled.p`
 `;
 
 export const Card: React.FC<CardProps> = ({
-  title = "Card Title",
-  body = "Card body text",
+  title = 'Card Title',
+  body = 'Card body text',
   backgroundColor,
   disabled = false,
 }) => (

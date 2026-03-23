@@ -27,11 +27,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write",
-    "format.check": "react-scripts test . --check",
-    "test:ci": "react-scripts test --watchAll=fasle",
+    "format:check": "prettier . --check",
+    "test:ci": "react-scripts test --watchAll=false",
     "prepare": "husky"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",

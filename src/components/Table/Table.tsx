@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { TableProps } from "./Table.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableProps } from './Table.types';
 
 const StyledTable = styled.table<{ $bg?: string; $disabled?: boolean }>`
   width: 100%;
@@ -8,9 +8,9 @@ const StyledTable = styled.table<{ $bg?: string; $disabled?: boolean }>`
   border-radius: 12px;
   overflow: hidden;
 
-  background: ${(p) => p.$bg ?? "#ffffff"};
+  background: ${(p) => p.$bg ?? '#ffffff'};
   opacity: ${(p) => (p.$disabled ? 0.6 : 1)};
-  cursor: ${(p) => (p.$disabled ? "not-allowed" : "default")};
+  cursor: ${(p) => (p.$disabled ? 'not-allowed' : 'default')};
 
   ${(p) => p.$disabled && `background: #bdbdbd;`};
 

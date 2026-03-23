@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Label } from "./Label";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Label } from './Label';
 
 const meta: Meta<typeof Label> = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
-  args: { text: "Label", backgroundColor: "transparent", disabled: false },
+  args: { text: 'Label', backgroundColor: 'transparent', disabled: false },
   argTypes: {
-    text: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -17,5 +17,5 @@ type Story = StoryObj<typeof Label>;
 
 export const Default: Story = {};
 export const Disabled: Story = {
-  args: { disabled: true, backgroundColor: "#bdbdbd" },
+  args: { disabled: true, backgroundColor: '#bdbdbd' },
 };

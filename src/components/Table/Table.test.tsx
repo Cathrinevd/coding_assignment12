@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { Table } from "./Table";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { Table } from './Table';
 
-describe("Table", () => {
-  test("is visible", () => {
+describe('Table', () => {
+  test('is visible', () => {
     render(
       <Table>
         <tbody>
@@ -14,10 +14,10 @@ describe("Table", () => {
         </tbody>
       </Table>
     );
-    expect(screen.getByText("Cell")).toBeVisible();
+    expect(screen.getByText('Cell')).toBeVisible();
   });
 
-  test("background changes when disabled", () => {
+  test('background changes when disabled', () => {
     render(
       <Table disabled>
         <tbody>
@@ -28,7 +28,7 @@ describe("Table", () => {
       </Table>
     );
 
-    const table = screen.getByTestId("table");
-    expect(table).toHaveStyleRule("background", "#bdbdbd");
+    const table = screen.getByTestId('table');
+    expect(table).toHaveStyleRule('background', '#bdbdbd');
   });
 });

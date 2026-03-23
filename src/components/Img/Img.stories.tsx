@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Img } from "./Img";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Img } from './Img';
 
 const meta: Meta<typeof Img> = {
-  title: "Components/Img",
+  title: 'Components/Img',
   component: Img,
   args: {
-    src: "https://via.placeholder.com/480x220",
-    alt: "image",
-    backgroundColor: "transparent",
+    src: 'https://via.placeholder.com/480x220',
+    alt: 'image',
+    backgroundColor: 'transparent',
     disabled: false,
   },
   argTypes: {
-    src: { control: "text" },
-    alt: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
