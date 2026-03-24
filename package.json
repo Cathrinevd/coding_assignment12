@@ -5,37 +5,44 @@
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.3.9",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^6.3.11",
+    "web-vitals": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --watchAll=false --passWithNoTests",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "check:precommit": "npm run format:check && npm run lint && npm run test:ci",
+    "check:ci": "npm run format:check && npm run lint && npm run test:ci && npm run build",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "test:ci": "react-scripts test --watchAll=false",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
       "plugin:storybook/recommended"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
     ]
   },
   "browserslist": {
@@ -51,22 +58,34 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.2.8",
-    "@storybook/addon-docs": "^10.2.8",
-    "@storybook/addon-onboarding": "^10.2.8",
-    "@storybook/preset-create-react-app": "^10.2.8",
-    "@storybook/react": "^10.2.8",
-    "@storybook/react-webpack5": "^10.2.8",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@eslint/js": "^8.57.1",
+    "@storybook/addon-a11y": "^10.3.0",
+    "@storybook/addon-docs": "^10.3.0",
+    "@storybook/addon-onboarding": "^10.3.0",
+    "@storybook/preset-create-react-app": "^10.3.0",
+    "@storybook/react-webpack5": "^10.3.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@types/styled-components": "^5.1.36",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.57.1",
-    "eslint-plugin-storybook": "^10.2.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-storybook": "^10.3.0",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
     "jest-styled-components": "^7.2.0",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
     "prop-types": "^15.8.1",
-    "storybook": "^10.2.8",
-    "webpack": "^5.105.1"
+    "rimraf": "^6.1.3",
+    "storybook": "^10.3.0",
+    "typescript": "^4.9.5",
+    "typescript-eslint": "^7.18.0",
+    "webpack": "^5.105.4"
   }
 }

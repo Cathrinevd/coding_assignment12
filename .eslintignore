@@ -1,6 +1,0 @@
-node_modules
-build
-storybook-static
-src/stories
-*.stories.ts
-*.stories.tsx
