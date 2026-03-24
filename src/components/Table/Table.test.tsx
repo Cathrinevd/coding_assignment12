@@ -12,7 +12,7 @@ describe('Table', () => {
             <td>Cell</td>
           </tr>
         </tbody>
-      </Table>
+      </Table>,
     );
     expect(screen.getByText('Cell')).toBeVisible();
   });
@@ -25,7 +25,7 @@ describe('Table', () => {
             <td>Cell</td>
           </tr>
         </tbody>
-      </Table>
+      </Table>,
     );
 
     const table = screen.getByTestId('table');

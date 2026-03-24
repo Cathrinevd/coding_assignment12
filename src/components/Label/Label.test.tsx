@@ -13,7 +13,7 @@ describe('Label', () => {
     render(<Label text="My Label" disabled backgroundColor="#bdbdbd" />);
     expect(screen.getByText('My Label')).toHaveStyleRule(
       'background',
-      '#bdbdbd'
+      '#bdbdbd',
     );
   });
 });

@@ -13,7 +13,7 @@ describe('Text', () => {
     render(<Text text="Hello text" disabled backgroundColor="#bdbdbd" />);
     expect(screen.getByText('Hello text')).toHaveStyleRule(
       'background',
-      '#bdbdbd'
+      '#bdbdbd',
     );
   });
 });
