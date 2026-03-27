@@ -142,7 +142,7 @@ vanDamme_cathrine_ui_garden_build_checks
 # Commiting to Github
 
 Step 1: git add .
-Step 2: git commit -m "meaning full message"
+Step 2: git commit -m "chore: meaning full message"
 Step 3. git push -u origin main
 
 # Github Actions
