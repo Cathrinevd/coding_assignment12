@@ -1,20 +1,15 @@
-FROM node:20-alpine AS build
+FROM node:18-alpine
 
-WORKDIR /van_damme_cathrine_ui_garden_build_checks
+WORKDIR /van_damme_cathrine_final_site
 
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 COPY . .
-
 RUN npm run build
 
-FROM node:20-alpine
-
-WORKDIR /van_damme_cathrine_ui_garden_build_checks
 RUN npm install -g serve
 
-COPY --from=build /van_damme_cathrine_ui_garden_build_checks/build ./build
-EXPOSE 8018
+EXPOSE 5575
 
-CMD ["serve", "-s", "build", "-l", "8018"]
+CMD ["serve", "-s", "build", "-l", "5575"]

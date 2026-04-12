@@ -99,6 +99,16 @@ ESLint checks
 Automated tests
 Production build
 
+# Updated Files for Assignment 14 Building a Portfolio Website
+
+## Updated App.tsx
+
+Updated App.tsx to have portfolio functions
+
+## Updated App.css
+
+Updated App.css styling
+
 # Steps to Create the Docker File/Container
 
 ## 1. Create Dockerfile!
@@ -107,37 +117,37 @@ Dockerfile
 
 ## 2. Build Docker Image
 
-docker build -t vandamme_cathrine_coding_assignment13 .
+docker build -t van_damme_cathrine_coding_assignment14 .
 
 ## 3. Run the Container
 
-docker run --name vandamme_cathrine_coding_assignment13 -p 8018:8018 vandamme_cathrine_coding_assignment13
+docker run --name van_damme_cathrine_coding_assignment14 -p 5575:5575 van_damme_cathrine_coding_assignment14
 
 ## Port
 
-http://127.0.0.1:8018
+http://localhost:5575
 
 ## 4. To Stop the container use:
 
-docker stop van_damme_cathrine_coding_assignment13
+docker stop van_damme_cathrine_coding_assignment14
 
 ## 5. Remove the container:
 
-docker rm van_damme_cathrine_coding_assignment13
+docker rm van_damme_cathrine_coding_assignment14
 
 # Docker Details
 
 # Container name:
 
-vandamme_cathrine_coding_assignment13
+van_damme_cathrine_coding_assignment14
 
 # Working directory:
 
-vanDamme_cathrine_ui_garden_build_checks
+van_damme_cathrine_ui_garden_build_checks
 
 # Port:
 
-8018
+5575
 
 # Commiting to Github
 
